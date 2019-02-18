@@ -1,12 +1,14 @@
-import Ember from 'ember-data';
 import Publisher from './publisher';
+import attr from 'ember-data/attr';
 import { hasMany } from 'ember-data/relationships';
+import { on } from '@ember/object/evented';
 
 export default Publisher.extend({
-  books: hasMany('book', { async: true })
-  // ,
+  name: attr(),
+  books: hasMany(),
 
-  // loadedAt: Ember.on('didLoad', function() {
-  //   this.set('loadedAt', new Date());
-  // })
+  onDidLoad: on('didLoad', function() {
+    this.set('loadedAt', new Date());
+  })
+
 });
