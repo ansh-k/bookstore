@@ -14,17 +14,20 @@ ul div {
   display: inline-block;
   vertical-align: top;
   height: 250px;
-  width: 200px;
+  width: 230px;
   text-align: center;
-  padding: 0 1em 3em;
+  padding: 0 3px 30px;
 }
 
 ul li {
   padding: 1em;
-  border: 6px solid #AFAFAF;
+  border: 0px solid #AFAFAF;
   background: #E9E9E9;
   height: 90%;
   cursor: pointer;
+  background: url(/images/book.jpg);
+  position: relative;
+  color: #fff;
 }
 
 a {
@@ -34,7 +37,8 @@ a {
 
 a.author {
   text-decoration: underline;
-  color: #111;
+  color: #fff;
+  position: relative;
 }
 
 .modal {
@@ -68,4 +72,66 @@ a.author {
   pointer-events: none;
   filter: blur(3px);
   -webkit-filter: blur(3px);
+}
+
+ul li:before {
+  position: absolute;
+  content: "";
+  background: #000;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  opacity: 0.7;
+}
+
+strong {
+  position: relative;
+}
+
+em {
+  color: #fff;
+  position: relative;
+}
+
+.header-text {
+  width: 100%;
+  text-align: center;
+  float: left;
+  padding-bottom: 10px;
+}
+
+.main-box {
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+  border: 1px solid #eee;
+  padding: 0px 15px 15px;
+  max-width: 95%;
+  margin-top: 40px;
+}
+
+.main-box p {
+  line-height: 26px;
+  font-weight: 100;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-align: justify;
+}
+
+.main-box h3 {
+  font-size: 23px;
+  font-family: sans-serif;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  margin-bottom: 0px;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.ember-view {
+  max-width: 1050px;
+  margin: 0 auto;
 }
