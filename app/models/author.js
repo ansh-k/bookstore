@@ -4,9 +4,9 @@ import { hasMany } from 'ember-data/relationships';
 import { on } from '@ember/object/evented';
 
 export default Publisher.extend({
-  name: attr(),
-  biography: attr(),
-  books: hasMany(),
+  name: attr('string'),
+  biography: attr('string'),
+  books: hasMany('book'),
 
   onDidLoad: on('didLoad', function() {
     this.set('loadedAt', new Date());
